@@ -1,0 +1,28 @@
+@use "sass:map";
+
+$breakpoints: (
+  mobile: "min-width: 375px",
+  desktop: "min-width: 1440px",
+);
+
+// definicja mixina do zapytań o media
+@mixin media($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if ($size) {
+    @media (#{$size}) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @include media(desktop) {
+    max-width: 1440px;
+    // margin: 0 auto;
+  }
+}
