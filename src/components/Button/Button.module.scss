@@ -1,14 +1,40 @@
 @import "../../styles/variables";
 
-.red {
-  background-color: $color-primary-red;
+%button {
   padding: 1rem 2rem;
   color: white;
   border-radius: 0.5rem;
-  border: 2px solid $color-primary-red;
+  box-shadow: -2px 9px 20px -3px $color-secendary-gray;
   transition: 0.2s;
+}
+
+.red {
+  @extend %button;
+  background-color: $color-primary-red;
+  border: 2px solid $color-primary-red;
   &:hover {
     background-color: white;
     color: $color-primary-red;
+  }
+}
+
+.blue {
+  @extend %button;
+  background-color: $color-primary-blue;
+  border: 2px solid $color-primary-blue;
+  &:hover {
+    background-color: white;
+    color: $color-primary-blue;
+  }
+}
+
+.gray {
+  @extend %button;
+  background-color: #f7f7f8;
+  border: 2px solid #f7f7f8;
+  color: $color-secendary-gray;
+  &:hover {
+    background-color: white;
+    border: 2px solid $color-secendary-gray;
   }
 }

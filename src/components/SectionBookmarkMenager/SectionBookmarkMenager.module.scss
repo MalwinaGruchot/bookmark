@@ -1,0 +1,48 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.section {
+  padding: 5rem 0;
+}
+
+.container {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.text {
+  line-height: 2rem;
+}
+
+.column {
+  width: 38%;
+}
+
+.wrapper {
+  display: flex;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+.circle {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 20%;
+    top: 20%;
+    width: 1000px;
+    height: 400px;
+    background-color: $color-primary-blue;
+    border-radius: 200px 0 0 200px;
+  }
+}
