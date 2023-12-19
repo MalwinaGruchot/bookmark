@@ -7,7 +7,7 @@ export default function DownloadBox({ icon, title, text, position }) {
     <div className={styles.wrapper} style={{ alignSelf: position }}>
       <img src={icon}></img>
       <h4>{title}</h4>
-      <p>{text}</p>
+      <p className={styles.text}>{text}</p>
       <img src={img} alt="" />
       <Button color={"blue"}>Add & Install Extension</Button>
     </div>

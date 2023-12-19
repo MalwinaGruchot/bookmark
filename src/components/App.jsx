@@ -4,6 +4,7 @@ import "./Header";
 import Header from "./Header";
 import SectionBookmarkMenager from "./SectionBookmarkMenager/SectionBookmarkMenager";
 import SectionDownload from "./SectionDownload/SectionDownload";
+import SectionQuestions from "./SectionQuestions";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <SectionBookmarkMenager></SectionBookmarkMenager>
         <Features></Features>
         <SectionDownload></SectionDownload>
+        <SectionQuestions></SectionQuestions>
       </main>
     </>
   );
