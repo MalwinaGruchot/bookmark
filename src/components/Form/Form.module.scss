@@ -1,0 +1,82 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/fonts";
+
+.section {
+  background-color: $color-primary-blue;
+  color: white;
+  padding: 5rem 0;
+}
+.container {
+  @include container;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  width: 60%;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form {
+  padding: 2rem 0 0 0;
+  width: 80%;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.input {
+  font-size: 18px;
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  width: 450px;
+  padding: 0 10px;
+  position: relative;
+  z-index: 2;
+  &::placeholder {
+    color: #3c3c3c26;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.err {
+  position: absolute;
+  padding: 30px 4px 4px;
+  bottom: -30px;
+  border-radius: 0.5rem;
+  left: 0;
+  background-color: $color-primary-red;
+  z-index: 0;
+  width: 450px;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 16px;
+  font-family: $font-rubik;
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: -2px 9px 20px -3px $color-secendary-gray;
+  transition: 0.2s;
+  background-color: $color-primary-red;
+  border: 2px solid $color-primary-red;
+  &:hover {
+    background-color: white;
+    color: $color-primary-red;
+  }
+}
