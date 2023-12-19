@@ -24,3 +24,11 @@
   padding-bottom: 2.5rem;
   width: 40%;
 }
+.wrapp {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  align-items: flex-start;
+  height: 500px;
+}
