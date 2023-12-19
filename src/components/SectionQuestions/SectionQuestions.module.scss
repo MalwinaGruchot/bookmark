@@ -1,0 +1,31 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.section {
+  padding: 5rem 0;
+}
+
+.container {
+  @include container;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  max-width: 35rem;
+}
+
+.title {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.text {
+  line-height: 2rem;
+  color: $color-secendary-gray;
+  text-align: center;
+  padding-bottom: 2.5rem;
+}

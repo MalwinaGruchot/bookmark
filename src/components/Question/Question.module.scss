@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.wrapper {
+  width: 100%;
+  padding: 1rem 0;
+  border-top: 1px solid $color-secendary-gray;
+  &:nth-last-child(2) {
+    border-bottom: 1px solid $color-secendary-gray;
+    margin-bottom: 2rem;
+  }
+}
+
+.wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-weight: 500;
+}
+
+.icon {
+  padding: 1rem;
+}
+
+.text {
+  line-height: 2rem;
+  color: $color-secendary-gray;
+}
