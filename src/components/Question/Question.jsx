@@ -6,11 +6,11 @@ export default function Question({ children, answer }) {
   const [active, setActive] = useState(false);
   return (
     <div className={styles.wrapper}>
-      <div className={styles.wrapp}>
+      <div className={styles.wrapp} onClick={() => setActive(!active)}>
         <h4 className={styles.title}>{children}</h4>
         <img
           className={styles.icon}
-          onClick={() => setActive(!active)}
+          // onClick={() => setActive(!active)}
           src={arrow}
           style={active ? { stroke: "red" } : {}}
         />

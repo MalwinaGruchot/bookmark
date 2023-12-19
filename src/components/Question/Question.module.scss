@@ -8,6 +8,9 @@
     border-bottom: 1px solid $color-secendary-gray;
     margin-bottom: 2rem;
   }
+  &:hover .title {
+    color: $color-primary-red;
+  }
 }
 
 .wrapp {
@@ -17,6 +20,7 @@
 }
 .title {
   font-weight: 500;
+  cursor: pointer;
 }
 
 .icon {
