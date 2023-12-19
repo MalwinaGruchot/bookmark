@@ -1,13 +1,16 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
 .section {
   padding: 5rem 0;
 }
-@import "../../styles/mixins";
-@import "../../styles/variables";
 
 .container {
   @include container;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .wrapper {
   max-width: 35rem;
@@ -23,4 +26,9 @@
   line-height: 2rem;
   color: $color-secendary-gray;
   text-align: center;
+  padding-bottom: 2.5rem;
+}
+
+.wrapp {
+  display: flex;
 }
