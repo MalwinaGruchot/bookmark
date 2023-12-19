@@ -3,6 +3,7 @@ import Features from "./Features/Features";
 import "./Header";
 import Header from "./Header";
 import SectionBookmarkMenager from "./SectionBookmarkMenager/SectionBookmarkMenager";
+import SectionDownload from "./SectionDownload/SectionDownload";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main>
         <SectionBookmarkMenager></SectionBookmarkMenager>
         <Features></Features>
+        <SectionDownload></SectionDownload>
       </main>
     </>
   );
