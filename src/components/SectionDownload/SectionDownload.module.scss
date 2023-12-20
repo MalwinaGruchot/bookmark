@@ -21,14 +21,20 @@
   line-height: 2rem;
   color: $color-secendary-gray;
   text-align: center;
-  padding-bottom: 2.5rem;
-  width: 40%;
+  padding-bottom: 4rem;
+  @include media(desktop) {
+    width: 40%;
+    padding-bottom: 2.5rem;
+  }
 }
 .wrapp {
   display: flex;
   justify-content: center;
   gap: 2rem;
-
   align-items: flex-start;
-  height: 500px;
+  flex-wrap: wrap;
+  @include media(desktop) {
+    flex-wrap: nowrap;
+    height: 500px;
+  }
 }
