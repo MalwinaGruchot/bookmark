@@ -15,7 +15,7 @@ function App() {
       <main>
         <SectionBookmarkMenager></SectionBookmarkMenager>
         <Features></Features>
-        {/* <SectionDownload></SectionDownload> */}
+        <SectionDownload></SectionDownload>
         {/* <SectionQuestions></SectionQuestions> */}
         {/* <Form></Form> */}
       </main>
