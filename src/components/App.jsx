@@ -15,11 +15,11 @@ function App() {
       <main>
         <SectionBookmarkMenager></SectionBookmarkMenager>
         <Features></Features>
-        <SectionDownload></SectionDownload>
-        <SectionQuestions></SectionQuestions>
-        <Form></Form>
+        {/* <SectionDownload></SectionDownload> */}
+        {/* <SectionQuestions></SectionQuestions> */}
+        {/* <Form></Form> */}
       </main>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 }

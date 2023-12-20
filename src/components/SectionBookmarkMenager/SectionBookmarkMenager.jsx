@@ -19,7 +19,9 @@ export default function SectionBookmarkMenager() {
           </div>
         </div>
         <div className={styles.circle}>
-          <img src={hero} />
+          <div className={styles.img}>
+            <img src={hero} />
+          </div>
         </div>
       </div>
     </section>

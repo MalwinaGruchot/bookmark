@@ -7,3 +7,16 @@
   align-items: center;
   padding: 3rem;
 }
+
+.menu {
+  display: none;
+  @include media(desktop) {
+    display: block;
+  }
+}
+
+.menuMobile {
+  @include media(desktop) {
+    display: none;
+  }
+}

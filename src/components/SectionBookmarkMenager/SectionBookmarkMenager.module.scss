@@ -6,25 +6,45 @@
 }
 
 .container {
-  @include container;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
+  flex-wrap: wrap;
+  @include container;
+
+  @include media(desktop) {
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
 }
 
 .title {
   font-size: 3rem;
+  padding-top: 4rem;
+  text-align: center;
   padding-bottom: 2rem;
+  @include media(desktop) {
+    text-align: left;
+    padding-bottom: 2rem;
+    padding-top: 0rem;
+  }
 }
 
 .text {
   line-height: 2rem;
   color: $color-secendary-gray;
+  text-align: center;
+  @include media(desktop) {
+    text-align: left;
+  }
 }
 
 .column {
-  width: 38%;
+  width: 100%;
+  order: 2;
+  @include media(desktop) {
+    width: 38%;
+    order: 0;
+  }
 }
 
 .wrapper {
@@ -35,15 +55,32 @@
 
 .circle {
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
     left: 20%;
     top: 20%;
-    width: 1000px;
-    height: 400px;
+    width: 500px;
+    height: 200px;
     background-color: $color-primary-blue;
     border-radius: 200px 0 0 200px;
+    @include media(desktop) {
+      left: 20%;
+      top: 20%;
+      width: 1000px;
+      height: 400px;
+    }
   }
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+img {
+  width: 100%;
 }

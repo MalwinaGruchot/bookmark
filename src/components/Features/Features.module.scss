@@ -31,4 +31,8 @@
 
 .wrapp {
   display: flex;
+  flex-wrap: wrap;
+  @include media(desktop) {
+    flex-wrap: wrap;
+  }
 }
