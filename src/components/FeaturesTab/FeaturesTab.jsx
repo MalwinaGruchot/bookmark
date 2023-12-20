@@ -6,7 +6,9 @@ export default function FeaturesTab({ id, title, text, img }) {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.circle}>
-          <img src={img} />
+          <div className={styles.img}>
+            <img src={img} />
+          </div>
         </div>
         <div className={styles.column}>
           <h2 className={styles.title}>{title}</h2>

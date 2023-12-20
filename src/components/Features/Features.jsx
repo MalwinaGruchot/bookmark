@@ -37,11 +37,11 @@ export default function Features() {
             </ButtonFeatures>
           ))}
         </div>
-        {/* <FeaturesTab
+        <FeaturesTab
           title={filteredData.title}
           img={filteredData.img}
           text={filteredData.text}
-        ></FeaturesTab> */}
+        ></FeaturesTab>
       </div>
     </section>
   );
