@@ -2,9 +2,7 @@ import { useState } from "react";
 import styles from "./Form.module.scss";
 import { validateEmail } from "../../validate/validate";
 
-const number = 35000;
-
-export default function Form() {
+export default function Form({ number }) {
   const [email, setEmail] = useState("");
   const [err, setErr] = useState({ email: false });
 
@@ -31,7 +29,9 @@ export default function Form() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <p className={styles.text}>{`${number}+ already joined`} </p>
+        <p className={styles.text}>
+          {`${number > 0 ? number : 0}+ already joined`}{" "}
+        </p>
         <h3 className={styles.title}>{`Stay up-to-date with what 
         we're doing`}</h3>
         <form noValidate onSubmit={handleSubmit} className={styles.form}>

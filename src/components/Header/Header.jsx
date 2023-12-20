@@ -3,7 +3,7 @@ import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import styles from "./Header.module.scss";
 import HeaderMenuMobile from "../HeaderMenuMobile/HeaderMenuMobile";
 
-export default function Header() {
+export default function Header({ setOpen }) {
   const [isActive, setIsActive] = useState(true);
 
   const handleClick = () => {
@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header onMouseOver={setOpen}>
       {isActive ? (
         <div className={styles.menuMobile}>
           <div

@@ -7,19 +7,42 @@ import SectionDownload from "./SectionDownload/SectionDownload";
 import SectionQuestions from "./SectionQuestions";
 import Form from "./Form";
 import Footer from "./Footer/Footer";
+import { useEffect, useState } from "react";
+import Modal from "./Modal/Modal";
 
 function App() {
+  const [number, setNumber] = useState(35000);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    let id;
+    if (number > 0) {
+      id = setInterval(() => {
+        setNumber((prev) => prev - 1750);
+      }, 1000);
+    }
+    return () => clearInterval(id);
+  }, [number]);
+
+  useEffect(() => {
+    const idTimeout = setTimeout(() => {
+      setOpen(true);
+    }, 30000);
+    return () => clearTimeout(idTimeout);
+  }, []);
+
   return (
     <>
-      <Header></Header>
+      <Header setOpen={() => setOpen(true)}></Header>
       <main>
         <SectionBookmarkMenager></SectionBookmarkMenager>
         <Features></Features>
         <SectionDownload></SectionDownload>
         <SectionQuestions></SectionQuestions>
-        <Form></Form>
+        <Form number={number}></Form>
       </main>
       <Footer></Footer>
+      <Modal close={() => setOpen(false)} open={open}></Modal>
     </>
   );
 }
