@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+  @include container;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  background-color: $color-secendary-blue;
+  padding: 3rem 0;
+}
+.img {
+  fill: white;
+}

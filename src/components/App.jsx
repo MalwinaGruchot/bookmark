@@ -6,6 +6,7 @@ import SectionBookmarkMenager from "./SectionBookmarkMenager/SectionBookmarkMena
 import SectionDownload from "./SectionDownload/SectionDownload";
 import SectionQuestions from "./SectionQuestions";
 import Form from "./Form";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <SectionQuestions></SectionQuestions>
         <Form></Form>
       </main>
+      <Footer></Footer>
     </>
   );
 }
