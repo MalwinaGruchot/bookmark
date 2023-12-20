@@ -4,9 +4,16 @@
 .container {
   @include container;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+
+  @include media(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .footer {
@@ -21,12 +28,11 @@
     }
   }
   cursor: pointer;
-
-  margin-left: 2rem;
 }
 
 .wrapp {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
+  gap: 30px;
 }

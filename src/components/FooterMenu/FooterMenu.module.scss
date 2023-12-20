@@ -2,18 +2,30 @@
 @import "../../styles/variables";
 .navList {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
   list-style: none;
   cursor: pointer;
   transition: 0.2s;
   color: white;
+  @include media(desktop) {
+    padding: 0 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .itemList {
   text-transform: uppercase;
-  padding-left: 4rem;
+  padding: 1rem 0;
   letter-spacing: 0.1rem;
+  text-align: center;
+  @include media(desktop) {
+    text-align: left;
+    padding: 0 0;
+    padding-left: 4rem;
+  }
   &:hover {
     color: $color-primary-red;
   }

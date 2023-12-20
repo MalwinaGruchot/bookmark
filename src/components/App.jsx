@@ -17,9 +17,9 @@ function App() {
         <Features></Features>
         <SectionDownload></SectionDownload>
         <SectionQuestions></SectionQuestions>
-        {/* <Form></Form> */}
+        <Form></Form>
       </main>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </>
   );
 }

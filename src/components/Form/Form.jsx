@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./Form.module.scss";
 import { validateEmail } from "../../validate/validate";
-import Button from "../Button";
 
 const number = 35000;
 
@@ -36,23 +35,25 @@ export default function Form() {
         <h3 className={styles.title}>{`Stay up-to-date with what 
         we're doing`}</h3>
         <form noValidate onSubmit={handleSubmit} className={styles.form}>
-          <input
-            className={styles.input}
-            type="email"
-            placeholder="Enter your email adress"
-            id="name"
-            name="name"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            style={err.email ? { border: "2px solid red" } : null}
-          />
+          <div className={styles.inputWrapp}>
+            <input
+              className={styles.input}
+              type="email"
+              placeholder="Enter your email adress"
+              id="name"
+              name="name"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              style={err.email ? { border: "2px solid red" } : null}
+            />
+            {err.email ? (
+              <p className={styles.err}>{`Whoops,make sure it's an email`}</p>
+            ) : null}
+          </div>
 
           <button className={styles.btn} type="submit">
             Contact Us
           </button>
-          {err.email ? (
-            <p className={styles.err}>{`Whoops,make sure it's an email`}</p>
-          ) : null}
         </form>
       </div>
     </section>

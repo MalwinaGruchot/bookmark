@@ -1,4 +1,5 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
 
 .container {
   @include container;
@@ -12,11 +13,43 @@
   display: none;
   @include media(desktop) {
     display: block;
+    padding-top: 2rem;
   }
+}
+
+.containerMobile {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: hsla(231, 65%, 28%, 0.796);
+  position: sticky;
+  width: 100%;
 }
 
 .menuMobile {
   @include media(desktop) {
     display: none;
   }
+}
+
+.list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 89px);
+  background-color: hsla(231, 65%, 28%, 0.796);
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-start;
+}
+.wrapp {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-grow: 1;
+  padding-bottom: 2rem;
 }

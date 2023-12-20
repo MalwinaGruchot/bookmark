@@ -9,11 +9,14 @@
 }
 .container {
   @include container;
-  width: 50%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include media(desktop) {
+    width: 50%;
+  }
 }
 
 .text {
@@ -23,18 +26,24 @@
 }
 
 .title {
-  width: 60%;
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
+  @include media(desktop) {
+    width: 60%;
+  }
 }
 
 .form {
   padding: 2rem 0 0 0;
-  width: 80%;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   position: relative;
+  @include media(desktop) {
+    flex-wrap: nowrap;
+    width: 80%;
+  }
 }
 
 .input {
@@ -42,10 +51,14 @@
   color: black;
   border: none;
   border-radius: 0.5rem;
-  width: 450px;
-  padding: 0 10px;
+  padding: 1rem 2rem;
+  width: 100%;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  @include media(desktop) {
+    // width: 450px;
+  }
+
   &::placeholder {
     color: #3c3c3c26;
   }
@@ -54,15 +67,20 @@
   }
 }
 
+.inputWrapp {
+  position: relative;
+  flex-grow: 1;
+}
+
 .err {
-  position: absolute;
-  padding: 30px 4px 4px;
-  bottom: -30px;
+  position: relative;
+  padding: 8px 4px 4px;
+  bottom: 10px;
   border-radius: 0.5rem;
   left: 0;
   background-color: $color-primary-red;
   z-index: 0;
-  width: 450px;
+  // width: 450px;
 }
 
 .btn {
@@ -75,6 +93,13 @@
   transition: 0.2s;
   background-color: $color-primary-red;
   border: 2px solid $color-primary-red;
+  width: 100%;
+  @include media(desktop) {
+    width: auto;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
   &:hover {
     background-color: white;
     color: $color-primary-red;

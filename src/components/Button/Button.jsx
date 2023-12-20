@@ -7,5 +7,7 @@ export default function Button({ children, color }) {
     return <div className={styles.blue}>{children}</div>;
   } else if (color === "gray") {
     return <div className={styles.gray}>{children}</div>;
+  } else if (color === "transparent") {
+    return <div className={styles.transparent}>{children}</div>;
   }
 }

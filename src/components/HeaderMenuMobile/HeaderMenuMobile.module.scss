@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.navList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 0 2rem;
+}
+
+.itemList {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  padding: 2rem 0;
+  border-bottom: 1px solid white;
+  width: 100%;
+  letter-spacing: 0.1rem;
+  &:first-child {
+    border-top: 1px solid white;
+  }
+}
+.btn {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  padding: 2rem 0;
+  width: 100%;
+  letter-spacing: 0.1rem;
+}

@@ -42,3 +42,11 @@
     border: 2px solid $color-secendary-gray;
   }
 }
+
+.transparent {
+  @extend %button;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  box-shadow: none;
+}
