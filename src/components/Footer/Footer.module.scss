@@ -4,13 +4,29 @@
 .container {
   @include container;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .footer {
   background-color: $color-secendary-blue;
   padding: 3rem 0;
 }
-.img {
-  fill: white;
+
+.svg {
+  &:hover {
+    .icon {
+      fill: $color-primary-red;
+    }
+  }
+  cursor: pointer;
+
+  margin-left: 2rem;
+}
+
+.wrapp {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
