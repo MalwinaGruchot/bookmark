@@ -3,7 +3,7 @@ import HeaderMenu from "../HeaderMenu/HeaderMenu";
 import styles from "./Header.module.scss";
 import HeaderMenuMobile from "../HeaderMenuMobile/HeaderMenuMobile";
 
-export default function Header({ setOpen }) {
+export default function Header() {
   const [isActive, setIsActive] = useState(true);
 
   const handleClick = () => {
@@ -124,7 +124,7 @@ export default function Header({ setOpen }) {
           </div>
         </div>
       )}
-      <div className={styles.menu} onMouseOver={setOpen}>
+      <div className={styles.menu}>
         <div className={styles.container}>
           <svg
             className={styles.svg}

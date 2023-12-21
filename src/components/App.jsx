@@ -33,7 +33,11 @@ function App() {
 
   return (
     <>
-      <Header setOpen={() => setOpen(true)}></Header>
+      <div
+        onMouseOver={() => setOpen(true)}
+        style={{ width: "100%", height: "1px" }}
+      ></div>
+      <Header></Header>
       <main>
         <SectionBookmarkMenager></SectionBookmarkMenager>
         <Features></Features>
