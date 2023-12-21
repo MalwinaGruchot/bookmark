@@ -1,4 +1,4 @@
-import styles from "./Footermenu.module.scss";
+import styles from "./FooterMenu.module.scss";
 
 const links = ["features", "pricing", "contact"];
 
