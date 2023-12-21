@@ -11,7 +11,7 @@ export default function Header({ setOpen }) {
   };
 
   return (
-    <header onMouseOver={setOpen}>
+    <header>
       {isActive ? (
         <div className={styles.menuMobile}>
           <div
@@ -124,7 +124,7 @@ export default function Header({ setOpen }) {
           </div>
         </div>
       )}
-      <div className={styles.menu}>
+      <div className={styles.menu} onMouseOver={setOpen}>
         <div className={styles.container}>
           <svg
             className={styles.svg}
